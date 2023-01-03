@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Little Lemon</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <header>
+            <img src="https://images.squarespace-cdn.com/content/v1/60b5ff53511bc333d755912d/f705fd47-7b64-455a-89f1-2d847bb700fd/favicon.ico?format=100w">
+        </header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="location.html">Location</a></li>
+                <li><a href="blog.html">Blog</a></li>
+            </ul>
+        </nav>
+        <main>
+            <h1>Blog</h1>
+            <article>
+                <h2>20% off this weekend</h2>
+                <p>Come down to Little Lemon and your meal will be 20% off!</p>
+            </article>
+            <article>
+                <h2>Our new menue</h2>
+                <p>We've updated our menue with new dinners.</p>
+            </article>
+            <h1>Sign Up</h1>
+                <form>
+                    <div>
+                        <lable for="user_first_name">First Name</lable><br>
+                        <input type="text" id="user_first_name" name="user_first_name" required minlength="3" maxlength="15">
+                    </div>
+                    <div>
+                        <lable for="user_last_name">Last Name</lable><br>
+                        <input type="text" id="user_last_name" name="user_last_name" required minlength="3" maxlength="15">
+                    </div>
+                    <div>
+                        <lable for="user_email">Email</lable><br>
+                        <input type="email" id="user_email" name="user_email" required >
+                    </div>
+                    <div>
+                        <lable for="user_password">Password</lable><br>
+                        <input type="password" id="user_password" name="user_password" required minlength="8">
+                    </div>
+                    <div>
+                        <lable for="user_confirmed_password">Confirm Password</lable><br>
+                        <input type="password" id="user_confirmed password" name="user_confirmed password" required minlength="8">
+                    </div>
+                    <div>
+                        <button type="submit">Sign Up</button>       
+                    </div>
+                </form>
+                <style>
+                    input:focus:invalid{
+                        border:3px solid red
+                    }
+                </style>
+        </main>
+        <footer>
+            <p>Cpyright Little Lemon</p>
+        </footer>
+    </body>
+</html>
