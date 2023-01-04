@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Little Lemon</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <header>
+            <img src="logo.png">
+        </header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="location.html">Location</a></li>
+                <li><a href="blog.html">Blog</a></li>
+            </ul>
+        </nav>
+        <main>
+            <h1>Book a Table</h1>
+            <form method="POST">
+                <fieldset id="size">
+                    <lable>
+                        <input type="radio" value="2" name="size">2-person table
+                    </lable>
+                  <lable>
+                    <input type="radio" value="4" name="size" checked>4-person table
+                  </lable>
+                  <lable>
+                    <input type="radio" value="6" name="size">6-person table
+                  </lable>
+                </fieldset>
+                <fieldset id="location">
+                    <lable>
+                        <input type="radio" value="indoors" name="location" checked>Indoors
+                    </lable>
+                    <lable>
+                        <input type="radio" value="outdoor" name="location">Indoors
+                    </lable>
+                </fieldset>
+                <button type="submit">Book table</button>
+            </form>
+        </main>
+        <footer>
+            <p>Cpyright Little Lemon</p>
+        </footer>
+    </body>
+</html>
