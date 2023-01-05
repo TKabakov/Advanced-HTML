@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Glossary: HTML form elements</title>
+    </head>
+    <body>
+        <h2>Input</h2>
+            <form action="my_action_page">
+                <lable for="uname">Username:</lable>
+                <br>
+                <input type="text" id="uname" name="username">
+                <br>
+                <lable for="wd">Password:</lable>
+                <br>
+                <input type="password" id="pwd" name="pwd">
+                <br>
+                <input type="submit" value="Login">
+            </form>
+
+        <h2>lable</h2>
+        <p>Defines a lable for an element.</p>
+        <p>The vlaue of for attribute should be equil to the id attribute of the element.</p>
+    
+        <h2>select</h2>
+        <p>Defines a drop-down list of option.</p>
+        <p>It has a couple of attributes:</p>
+            <ul>
+                <li><strong>form</strong>, the id of the form in which the drop-down list appears</li>
+                <li><strong>name</strong> specifies the name of the control</li>
+                <li>multiple Boolean attribute, when specified, indicates if a user can select mutiple options out of the list</li>
+                <li><strong>required</strong> idicates, if the user is required to select an option before submitting a form</li>
+                <li><strong>size</strong> mentions the number of visible oprtions in a drop-down list</li>
+            </ul>
+        <lable for="course">Choose a course:</lable>
+        <select id="course" name="courselist">
+            <option value="html">HTML Introduction</option>
+            <option value="ccs">Styling with CSS</option>
+            <option value="js">JavaScript</option>
+            <option value="react">React Basics</option>
+        </select>
+
+        <h2>textarea</h2>
+        <p>Defines a multi-line input field, tipically to allow user to input longer textual data.</p>
+        <p>The common attributes include:</p>
+            <ul>
+                <li><strong>cols</strong> defines the width of the text area, the default value is 20</li>
+                <li><strong>form</strong> the form element the text area is associated with</li>
+                <li><strong>maxlength</strong> when specified, limits the maximum number of characters that can be entered</li>
+                <li><strong>minlength</strong> defines hte minimum number of charcters that the user should enter</li>                
+                <li><strong>readonly</strong> once set, the user cannot modify the contents</li>
+                <li><strong>rows</strong> defines the number of visible text lines for the text area</li>
+            </ul>
+        <textarea name="response" rows="5" cols="20" maxlength="100" readonly>Hello!
+        </textarea>
+        <h2>button</h2>
+        <p>Defines a clickable button.</p>
+        <p>The onclick attribute defines the behavior when the button is click by the user.</p>
+            <button type="button" onclick="alert('You just clicked!')">Click me!</button>
+        
+            <h2>fieldset</h2>
+            <p>Used to group ralated input elements in a form.</p>
+
+            <h2>legend</h2>
+            <p>Defines a caption for the <strong>fieldset</strong> element.</p>
+
+            <fieldset>
+                <legend>Personal Info</legend>
+                <lable for="fname">First name:</lable><br>
+                <input type="text" id="fname" name="fname" value="John"><br>
+                <lable for="lname">Last name:</lable><br>
+                <input type="text" id="lname" name="lname" value="Doe"><br>        
+            </fieldset>
+
+            <fielset>
+                <legend>Qualification</legend>
+                <lable for="pdegree">Primary degree:</lable><br>
+                <input type="text" id="pdegree" name="degree" value="Masters"><br>
+                <lable for="fos">Field of study:</lable><br>
+                <input type="text" id="fos" name="field" value="Psychology"><br>
+            </fielset>
+
+            <h2>datalist</h2>
+            <p>Similar to <strong>select</strong>, but user can still provide textual or numerical input other than listed options.</p>
+                <form action="/my_action_page">
+                    <lable for="flowers">Favorite flowers:</lable>
+                    <input list="flowers" name="flowers">
+                    <datalist id="flowers">
+                        <option value="Rose"></option>                        
+                        <option value="Lily"></option>                        
+                        <option value="Tulip"></option>                        
+                        <option value="Daffordil"></option>                        
+                        <option value="Orchid"></option>
+                    </datalist>
+                </form>
+        </body>
+   
+</html>
