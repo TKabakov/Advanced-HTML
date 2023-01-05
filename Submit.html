@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<htm>
+    <head>
+        <title>Submit</title>
+    </head>
+    <body>
+        <h3>Action</h3>
+        <p>The action attribute of the form specifies to which <strong>web address</strong> the form must be sent. </p>
+        <h4>URL address:https://meta.com/login</h4>
+        <form action="https://meta.com/login"></form>
+        <h4>Absolute path:/login</h4>
+        <p>the address will be <strong>https://meta.com/login</strong></p>
+        <form action="/login"></form>
+        <h4>Relative path:login</h4>
+        <p>the address will be <strong>https://meta.com/company-info/login</strong></p>
+        <form action="login"></form>
+
+        <p> When <strong>action</strong> attribute is omitted the form will be send to the <strong>currant</strong> address.</p>
+        <h3>Method</h3>
+        <p>The method attribute specifies which HTTP method is used to submit the form: <strong>GET</strong> or <strong>POST</strong>.</p>
+        <p>When method is not specified the default method is GET.</p>
+        <p><strong>GET</strong> method - the data in the form field is encoded in the URL. </p>
+        <p><strong>POST</strong> method - the date in the form field is part of the HTTP request body.</p>
+
+    </body>
+</htm>
