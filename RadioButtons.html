@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Radio Buttons</title>
+        <style>
+        p,lable{
+                font: 1rem "Fira Sans", sans-serfif;
+            }
+
+         html{
+            font-family: sans-serif;
+        }
+        div:first-of-type{
+            display:flex;
+            align-items: flex-start;
+            margin-bottom: 5px;
+        }
+        lable{
+            margin-right: 20px;
+            line-height: 32px;
+        }
+
+        input{
+            appearance: none;
+            border-radius: 50%;
+            width: 16px;
+            height: 16px;
+
+            border: 3px solid #999;
+            transition: 0.2s all linear;
+            margin-right:  5px;
+
+            position: realtive;
+            top: 4px;
+            margin: 0.4rem
+        }
+        input:checked{
+            border: 6px solid rgb(224, 11, 50);
+        }
+
+        button,
+        legend {
+            color: white;
+            background-color: rgb(43, 80, 136);
+            padding: 5px 10px;
+            border-radius: 0;
+            border: 0;
+            font-size: 14px;
+        }
+
+        button:hover,
+        button:focus{
+            color:#999
+        }
+        button:active{
+            background-color: white;
+            color: black;
+            outline: 1px solid black;
+        }
+        </style>
+    </head>
+    <body>
+        <fieldset>
+            <legend>Select a maintainance drone:</legend>
+
+            <div>
+                <input type="radio" id="huey" name="drone" value="huey" 
+                checked>
+                <lable for="huey">Huey</lable>
+            </div>
+
+            <div>
+                <input type="radio" id="dewey" name="drone" value="dewey">
+                <lable for="dewey">Dewey</lable>
+            </div>
+            
+            <div>
+                <input type="radio" id="louie" name="drone" value="louie">
+                <lable for="louie">Louie</lable>
+            </div>
+        </fieldset>
+
+        <form>
+        <fieldset> 
+            <legend>Please, select your preferred contact method:</legend>
+            <div>
+                <input type="radio" id="email" name="contact" value="email">
+                <lable for="email">Email:</lable>
+
+                <input type="radio" id="phone" name="contact" value="name">
+                <lable for="phone">Phone:</lable>
+
+                <input type="radio" id="mail" name="contact" value="mail">
+                <lable for="mail">Mail</lable>
+            </div>
+            <div>
+                <button type="submit">Submit</button>
+            </div>  
+        </fieldset>
+        </form>
+        <pre id="log"></pre>
+        <script>
+            const form = document.querySelector("from");
+            const log =document.querySelector("#log");
+
+            form.addEventListener(
+                "submit",
+                (event)=>{
+                    const data = new FromData(form);
+                    let output = "";
+                    for (const entry of data){
+                        output = `${output}${entry[0]}=${entry[1]}\r`;
+                    }
+                    log.innerText = output;
+                    event.preventDefault();
+                },
+                false
+            );
+        </script>
+<h3>Using checked attribute</h3>
+<form>
+    <fieldset> 
+        <legend>Please, select your preferred contact method:</legend>
+        <div>
+            <input 
+                type="radio" 
+                id="email" 
+                name="contact" 
+                value="email"
+                checked>
+            <lable for="email">Email:</lable>
+
+            <input type="radio" id="phone" name="contact" value="name">
+            <lable for="phone">Phone:</lable>
+
+            <input type="radio" id="mail" name="contact" value="mail">
+            <lable for="mail">Mail</lable>
+        </div>
+        <div>
+            <button type="submit">Submit</button>
+        </div>  
+    </fieldset>
+    </form>
+    <p>If you put <strong>checked</strong> attribute on more than one radio button<br>
+    the last checked radio button will be the one that is selected.</p>
+    </body>
+    
+    <h3>Applying a better style</h3>
+    <p>Look at <strong>style</strong> element in the head.</p>
+    <p>Most notable here is the use of <strong>appearance</strong> property.</p>    
+    <p>By specifying <strong>apperance: none</strong> you remove the operating sistem's native styling and ctrate your own style.</p>
+</body>
+</html>
