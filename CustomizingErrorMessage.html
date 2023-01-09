@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Implementing a sustomized error message</title>
+    </head>
+    <body>
+        <h2>Simple Example</h2>
+        <form>
+            <lable for="mail">
+                I would like you to provide me with an email address:
+            </lable>
+            <input type="email" id="mail" name="mail">
+            <button>Submit</button>
+        </form>
+        <script>
+            const email = document.getElementById("mail");
+
+            email.addEventListener("input", (event)=>{
+                if (email.validity.typeMismatch){
+                    email.setCustomValidity("I am expecting an email address!");
+                } else {
+                    email.setCustomValidity("That is an email address");
+                }
+                });
+        </script>
+    </body>
+</html>
