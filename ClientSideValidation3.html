@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<head>
+    <title>Clien Side Validation by Mozilla</title>
+    <style>
+        input:invalid{
+            border: 2px dashed red;
+        }
+
+        input:valid{
+            border: 2px solid blue;
+        }
+
+        input:invalid:required{
+            background-image: linear-gradient(to right, pink, lightgreen) ;
+        }
+    </style>
+</head>
+<body>
+    <h2>Simple start file</h2>
+    <form>
+        <lable for="choose">Would you prefer a banana or a cherry?</lable>
+        <input id="choose" name="i-like">
+        <button>Submit</button>
+    </form>
+    <h2>The required attribute</h2>
+    <form>
+        <lable for="choose">Would you prefer a banana or a cherry?(required)</lable>
+        <input id="choose" name="i-like" required>
+        <button>Submit</button>
+    </form>
+    <h2>Validatimg aginst a regural expression.</h2>
+    <form>
+        <lable for="choose">Would you prefer a banana or a cherry?(required)</lable>
+        <input id="choose" name="i-like" required pattern="[Bb]anana|[Cc]herry">
+        <button>Submit</button>
+    </form>
+    <h2>Constraining the values of your entries</h2>
+    <form>
+        <div>
+            <lable for="choose">Would you prefer a banana or a cherry?(required)</lable>
+            <input 
+                type="text"
+                id="choose" 
+                name="i-like" 
+                required
+                minlength="6"
+                maxlength="6">
+        </div>
+        <div>
+            <lable fro="number">How many would you like?</lable>
+            <input type="number" id="number" name="amount" value="1" min="1" max="10">
+        </div>
+        <div>
+            <button>Submit</button>
+        </div>
+    </form>
+</body>
