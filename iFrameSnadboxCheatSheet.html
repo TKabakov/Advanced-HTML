@@ -11,7 +11,7 @@
             <li><strong>allow="fullscreen"</strong> the fullscreen mode can be activated</li>
             <li><strong>allow="geolocation"</strong> lets you access the user's location</li>
         </ul>
-            <p>A semicolon-separator should be used to specify morw than one feature:</p>
+            <p>A semicolon-separator should be used to specify more than one feature:</p>
             <iframe src="https://example.com/..." allow="camera; microphone"></iframe>
 
         <h2>name</h2>
@@ -30,7 +30,40 @@
                 <li><strong>origin</strong> The refferer will be limited to the origin of the referring page.</li>
                 <li><strong>strict-origin</strong> The origin of the document is sent as referrer only when using the same protocol security level(HTTPS to HTTPS)</li>
             </ul>
-        
+        <h2>sandbox</h2>
+        <p>A sandbox applies extra restrictions to the content in the <strong>inframe</strong>.</p>
+        <p>To lift particular restriction, an attribute valueis used:</p>
+        <ul>
+            <li><strong>allow-downloads</strong> Allows the user to download an item</li>
+            <li><strong>allow-forms</strong> Allows the user to submit forms.</li>
+            <li><strong>allow-modals</strong> The resource can open modal windows.</li>
+            <li><strong>allow-orientation-lock</strong> Lets the resource lock the screen orientation.</li>
+            <li><strong>allow-popups</strong> Allows popups to open.</li>
+            <li><strong>allow-presentation</strong> Allows a presentation session to start.</li>
+            <li><strong>allow-scripts</strong> Lets the resource run script without creating popup windows.</li>
+        </ul>
+        <p>When the value of <strong>sandbox</strong> is empty, all restriction are applied.</p>
+
+        <iframe src="my_iframe_sandbox.html"  sandbox="allow-forms allow-scripts"></iframe>
     
+        <h2>src</h2>
+        <p>The URL of the page to embed in the <strong>iframe</strong></p>
+    
+        <h2>srcdoc</h2>
+        <p>Let's you specify the inline HTML to be embed in the <strong>iframe</strong></p>
+        <p>When defined <strong>srcdoc</strong> would override the <strong>src</strong> attribute:</p>
+
+        <iframe src="my_iframe_sandbox.html" srcdoc="<p>My inline html</p>"></iframe>
+    
+        <h2>loading</h2>
+        <p>This attribute let's specify if the iframe should be loaded immediately when the page loads (<strong>eager</strong>)
+        or when iframe is displayed in the browser (<strong>lazy</strong>).</p>
+
+        <iframe src="my_iframe_src.html" loading="lazy"></iframe>
+
+        <h2>title</h2>
+        <p>This attribute let's you add a description to the iframe for accessibility purposes.</p>
+
+        <iframe src="history.html" title="An embedded document about the history of my family"></iframe>
     </body>
 </html>
