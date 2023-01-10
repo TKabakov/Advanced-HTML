@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> iFrame sandbox cheatsheet</title>
+    </head>
+    <body>
+        <p><strong>iFrame</strong> embeds an HTML page into another page.</p>
+
+        <h2>allow</h2>
+        <ul>It specifies what permissions of features are available to the frame:
+            <li><strong>allow="fullscreen"</strong> the fullscreen mode can be activated</li>
+            <li><strong>allow="geolocation"</strong> lets you access the user's location</li>
+        </ul>
+            <p>A semicolon-separator should be used to specify morw than one feature:</p>
+            <iframe src="https://example.com/..." allow="camera; microphone"></iframe>
+
+        <h2>name</h2>
+            <iframe name = "my Frame" width="400" height="300"></iframe>
+    
+        <h2>height</h2>
+            <p>The default value is 150 pixels.</p>
+
+        <h2>width</h2>
+            <p>The default value is 300 pixels.</p>
+        
+        <h2>referrerpolicy</h2>
+            <ul>A referrer is the HTTP header that lets the page know who is loading it.
+                The common values are:
+                <li><strong>no-referrer</strong> The referrer header will not be sent.</li>
+                <li><strong>origin</strong> The refferer will be limited to the origin of the referring page.</li>
+                <li><strong>strict-origin</strong> The origin of the document is sent as referrer only when using the same protocol security level(HTTPS to HTTPS)</li>
+            </ul>
+        
+    
+    </body>
+</html>
