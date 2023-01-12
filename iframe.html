@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>HTML iframe</title>
+    </head>
+    <body>
+        <h2>Set Hight and Width</h2>
+            <iframe src="demo_iframe.html" height="200" width="300" title="Iframe Example"></iframe>
+            <p>You can add style attribute and use CSS height and width properties:</p>
+            <iframe src="demo_iframe.html" style="height:200px;width:300;" title="Iframe Example"></iframe>
+        <h2>Iframe - Remove the Border</h2>
+            <p> To remve the border, add <strong>style</strong> attribute and use the CSS <strong>border</strong> property:</p>
+            <iframe src="demo_iframe.html" style="height:200px;width:300;border:none" title="Iframe Example"></iframe>
+            <p> With CSS, you can also change the size, style and color of the iframe's border:</p>
+            <iframe src="demo_iframe.html" style="border:2px solid red" title="Iframe Example"></iframe>
+        <h2>Iframe - Target for a Link</h2>
+            <p>An iframe can be used as the target frame for a link.</p>
+            <p>The <strong>target</strong> attribute of the link must refer to the name attribute of the iframe:</p>
+            <iframe src="demo_iframe.html" name="iframe_a" title="Iframe Example"></iframe>
+            <p><a href="https://www.w3schools.com" target="iframe_a">W3Schools.com</a></p>
+        <h3>Exercises:</h3>
+            <p>Create an iframe with a URL address that goes to http://www.w3schools.com.</p>
+                <iframe src="http://www.w3schools.com"></iframe>
+            <p>Use an iframe attribute to make the iframe 500 pixels wide.</p>
+                <iframe src="http://www.w3schools.com" width="500"></iframe>
+            <p>Use CSS to display an iframe with no borders.</p>
+                <iframe src="http://www.w3schools.com" style="border:none;"></iframe>
+            <p>Create an iframe with a URL addresss that goes to "default.html".</p>
+                <iframe src="default.html"></iframe>
+            </body>
+</html>
