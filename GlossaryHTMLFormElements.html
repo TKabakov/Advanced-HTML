@@ -57,41 +57,42 @@
         <p>The onclick attribute defines the behavior when the button is click by the user.</p>
             <button type="button" onclick="alert('You just clicked!')">Click me!</button>
         
-            <h2>fieldset</h2>
-            <p>Used to group ralated input elements in a form.</p>
+        <h2>fieldset</h2>
+        <p>Used to group ralated input elements in a form.</p>
 
-            <h2>legend</h2>
-            <p>Defines a caption for the <strong>fieldset</strong> element.</p>
+        <h2>legend</h2>
+        <p>Defines a caption for the <strong>fieldset</strong> element.</p>
 
-            <fieldset>
-                <legend>Personal Info</legend>
-                <lable for="fname">First name:</lable><br>
-                <input type="text" id="fname" name="fname" value="John"><br>
-                <lable for="lname">Last name:</lable><br>
-                <input type="text" id="lname" name="lname" value="Doe"><br>        
-            </fieldset>
+        <fieldset>
+            <legend>Personal Info</legend>
+            <lable for="fname">First name:</lable><br>
+            <input type="text" id="fname" name="fname" value="John"><br>
+            <lable for="lname">Last name:</lable><br>
+            <input type="text" id="lname" name="lname" value="Doe"><br>        
+        </fieldset>
 
-            <fielset>
-                <legend>Qualification</legend>
-                <lable for="pdegree">Primary degree:</lable><br>
-                <input type="text" id="pdegree" name="degree" value="Masters"><br>
-                <lable for="fos">Field of study:</lable><br>
-                <input type="text" id="fos" name="field" value="Psychology"><br>
-            </fielset>
+        <fielset>
+            <legend>Qualification</legend>
+            <lable for="pdegree">Primary degree:</lable><br>
+            <input type="text" id="pdegree" name="degree" value="Masters"><br>
+            <lable for="fos">Field of study:</lable><br>
+            <input type="text" id="fos" name="field" value="Psychology"><br>
+        </fielset>
 
-            <h2>datalist</h2>
-            <p>Similar to <strong>select</strong>, but user can still provide textual or numerical input other than listed options.</p>
-                <form action="/my_action_page">
-                    <lable for="flowers">Favorite flowers:</lable>
-                    <input list="flowers" name="flowers">
-                    <datalist id="flowers">
-                        <option value="Rose"></option>                        
-                        <option value="Lily"></option>                        
-                        <option value="Tulip"></option>                        
-                        <option value="Daffordil"></option>                        
-                        <option value="Orchid"></option>
-                    </datalist>
-                </form>
+        <h2>datalist</h2>
+        <p>Similar to <strong>select</strong>, but user can still provide textual or numerical input other than listed options.</p>
+        
+        <form action="/my_action_page">
+            <lable for="flowers">Favorite flowers:</lable>
+            <input list="flowers" name="flowers">
+            <datalist id="flowers">
+                <option value="Rose"></option>                        
+                <option value="Lily"></option>                        
+                <option value="Tulip"></option>                        
+                <option value="Daffordil"></option>                        
+                <option value="Orchid"></option>
+            </datalist>
+        </form>
         </body>
    
 </html>
